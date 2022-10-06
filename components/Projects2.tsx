@@ -24,7 +24,7 @@ function Projects2({ projects }: Props) {
         </h3>
       </div>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#709DFF]/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scroll-smooth scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#709DFF]/80">
         {projects?.map((project, i) => (
           <div
             key={project._id}
@@ -60,7 +60,7 @@ function Projects2({ projects }: Props) {
                     })}
                   </div>
 
-                  <Link href="/">
+                  <Link href={"/projects/" + project.title}>
                     <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
                       More Info
                     </p>
@@ -86,7 +86,7 @@ function Projects2({ projects }: Props) {
                 })}
               </div>
 
-              <Link href="/">
+              <Link href={"/projects/" + project.title}>
                 <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer shadow-xl shadow-black">
                   More Info
                 </p>

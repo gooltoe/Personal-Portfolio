@@ -37,18 +37,6 @@ function Skills({ skills }: Props) {
               return <Skill key={skill._id} skill={skill} />;
             }
           })}
-          {/* <Skill directionLeft />
-          <Skill directionLeft />
-          <Skill directionLeft />
-          <Skill directionLeft />
-          <Skill directionLeft />
-          <Skill directionLeft />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill />
-          <Skill /> */}
         </div>
       </motion.div>
     </div>

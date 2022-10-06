@@ -20,8 +20,8 @@ function ContactMe({ socials }: Props) {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-evenly items-center md:pt-16">
-      <div>
+    <div className="flex flex-col justify-evenly items-center md:pt-16">
+      <div className="mb-20">
         <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
           Contact
         </h3>
@@ -34,8 +34,8 @@ function ContactMe({ socials }: Props) {
         <span className="underline decoration-[#709DFF]/50">Get in touch.</span>
       </h4> */}
       <div className="grid lg:grid-cols-5 gap-8 px-[10vw]">
-        <div className="col-span-3 lg:col-span-2 w-full h-auto">
-          <div className="p-4 shadow-xl rounded-xl hover:scale-105 duration-300 ease-in">
+        <div className="col-span-3 lg:col-span-2 w-full h-full">
+          <div className="p-4 shadow-xl rounded-xl lg:hover:scale-105 duration-300 ease-in">
             <div className="max-w-[700px]">
               <img
                 src="https://francescocolumbu.com/wp-content/uploads/2021/03/Best-Laptop-for-Front-End-Developer.jpg"
@@ -71,56 +71,61 @@ function ContactMe({ socials }: Props) {
             </div>
           </div>
         </div>
-        <div className="col-span-3 w-full h-auto shadow-xl p-4 rounded-xl">
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="grid md:grid-cols-2 gap-4 w-full">
+        <div className="col-span-3 w-full h-full shadow-xl p-4 rounded-xl">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col h-full justify-between"
+          >
+            <div>
+              <div className="grid md:grid-cols-2 gap-4 w-full">
+                <div className="flex flex-col">
+                  <label className="uppercase tracking-widest text-gray-500 text-sm pb-2">
+                    Name
+                  </label>
+                  <input
+                    {...register("name")}
+                    placeholder="Name"
+                    className="contactInput"
+                    type="text"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label className="uppercase tracking-widest text-gray-500 text-sm pb-2">
+                    Email
+                  </label>
+                  <input
+                    {...register("email")}
+                    placeholder="Email"
+                    className="contactInput"
+                    type="email"
+                  />
+                </div>
+              </div>
               <div className="flex flex-col">
-                <label className="uppercase tracking-widest text-gray-500 text-sm pb-2">
-                  Name
+                <label className="uppercase tracking-widest text-gray-500 text-sm py-2">
+                  Subject
                 </label>
                 <input
-                  {...register("name")}
-                  placeholder="Name"
+                  {...register("subject")}
+                  placeholder="Subject"
                   className="contactInput"
                   type="text"
                 />
               </div>
               <div className="flex flex-col">
-                <label className="uppercase tracking-widest text-gray-500 text-sm pb-2">
-                  Email
+                <label className="uppercase tracking-widest text-gray-500 text-sm py-2">
+                  Message
                 </label>
-                <input
-                  {...register("email")}
-                  placeholder="Email"
+                <textarea
+                  {...register("message")}
+                  placeholder="Message"
                   className="contactInput"
-                  type="email"
+                  rows={6}
                 />
               </div>
             </div>
-            <div className="flex flex-col">
-              <label className="uppercase tracking-widest text-gray-500 text-sm py-2">
-                Subject
-              </label>
-              <input
-                {...register("subject")}
-                placeholder="Subject"
-                className="contactInput"
-                type="text"
-              />
-            </div>
 
-            <div className="flex flex-col">
-              <label className="uppercase tracking-widest text-gray-500 text-sm py-2">
-                Message
-              </label>
-              <textarea
-                {...register("message")}
-                placeholder="Message"
-                className="contactInput"
-              />
-            </div>
-
-            <button className="bg-[#709DFF] p-4 w-full rounded-md text-gray-700 font-bold text-lg mt-4">
+            <button className="custom-button p-4 w-full rounded-md text-gray-800 font-bold text-lg mt-4">
               Submit
             </button>
           </form>
