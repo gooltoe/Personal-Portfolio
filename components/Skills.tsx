@@ -10,7 +10,7 @@ type Props = {
 
 function Skills({ skills }: Props) {
   return (
-    <div className="h-screen flex flex-row justify-evenly">
+    <div className=" flex flex-row justify-evenly">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -18,16 +18,16 @@ function Skills({ skills }: Props) {
         viewport={{ once: true }}
         className="flex flex-col text-center justify-evenly"
       >
-        <div>
-          <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
+        <div className="mb-20">
+          <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl pl-[20px]">
             Skills
           </h3>
-          <h3 className="tracking-[3px] text-gray-500 text-sm uppercase">
+          <h3 className="tracking-[3px] text-gray-500 text-sm uppercase pl-[3px]">
             What I Can Do
           </h3>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-h-[450px] lg:max-h-[100%] md:overflow-x-clip overflow-x-hidden scrollbar-thin  scrollbar-track-gray-400/20 scrollbar-thumb-[#709DFF]/80">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5  lg:max-h-[100%] md:overflow-x-clip overflow-x-hidden scrollbar-thin  scrollbar-track-gray-400/20 scrollbar-thumb-[#709DFF]/80">
           {skills?.map((skill, i) => {
             if (i < skills.length / 2) {
               return (

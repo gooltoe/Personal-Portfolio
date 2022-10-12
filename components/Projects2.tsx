@@ -16,10 +16,10 @@ function Projects2({ projects }: Props) {
       className="h-screen relative flex flex-col overflow-hidden justify-evenly text-center items-center z-0 pt-16"
     >
       <div>
-        <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
+        <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl pl-[20px]">
           Projects
         </h3>
-        <h3 className="tracking-[3px] text-gray-500 text-sm uppercase text-center">
+        <h3 className="tracking-[3px] text-gray-500 text-sm uppercase text-center pl-[3px]">
           What i've built
         </h3>
       </div>

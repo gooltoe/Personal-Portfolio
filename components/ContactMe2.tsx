@@ -22,10 +22,10 @@ function ContactMe({ socials }: Props) {
   return (
     <div className="flex flex-col justify-evenly items-center md:pt-16">
       <div className="mb-20">
-        <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
+        <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl pl-[20px]">
           Contact
         </h3>
-        <h3 className="tracking-[3px] text-gray-500 text-sm uppercase text-center">
+        <h3 className="tracking-[3px] text-gray-500 text-sm uppercase text-center pl-[3px]">
           Get In Touch
         </h3>
       </div>

@@ -15,8 +15,8 @@ function Hero({ pageInfo, socials }: Props) {
     delaySpeed: 2000,
   });
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden pt-28">
-      <div className="hover:scale-150 ease-in duration-700">
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+      <div className="md:hover:scale-150 ease-in duration-700">
         <BackgroundCircles />
       </div>
 
