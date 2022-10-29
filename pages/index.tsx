@@ -1,8 +1,10 @@
+import React, { useState, MouseEvent, useRef } from "react";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
 
+import Cursor from "../components/Cursor";
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -17,6 +19,9 @@ import { fetchSkills } from "../utils/fetchSkills";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
+import Expertise from "../components/Expertise";
+import Expertise2 from "../components/Expertise2";
+import GridEffect from "../components/GridEffect";
 
 type Props = {
   skills: Skill[];
@@ -25,11 +30,33 @@ type Props = {
   pageInfo: PageInfo;
 };
 
+const useMove = () => {
+  const [state, setState] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: MouseEvent) => {
+    // e.preventDefault();
+    e.persist();
+    setState((state) => ({ ...state, x: e.clientX, y: e.clientY }));
+  };
+  return {
+    x: state.x,
+    y: state.y,
+    handleMouseMove,
+  };
+};
+
 const Home = ({ skills, socials, projects, pageInfo }: Props) => {
+  const { x, y, handleMouseMove } = useMove();
+
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen overflow-y-scroll overflow-x-hidden z-0 md:scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#709DFF]/80 scroll-smooth caret-transparent">
+    <div
+      onMouseMove={handleMouseMove}
+      className="bg-[rgb(15,15,15)] text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scroll-smooth caret-transparent"
+    >
+      {/* Cursor */}
+      {/* <Cursor x={x} y={y} /> */}
       <Head>
-        <title>Joe's Portfolio</title>
+        <title>Joe Rho - Web Developer</title>
       </Head>
 
       {/* Header */}
@@ -40,10 +67,15 @@ const Home = ({ skills, socials, projects, pageInfo }: Props) => {
         <Hero pageInfo={pageInfo} socials={socials} />
       </section>
 
-      {/* About */}
-      <section id="About" className="snap-center md:px-[10vw]">
-        <About pageInfo={pageInfo} />
+      {/* Expertise */}
+      <section id="Expertise">
+        <Expertise />
       </section>
+
+      {/* About */}
+      {/* <section id="About" className="snap-center md:px-[10vw]">
+        <About pageInfo={pageInfo} />
+      </section> */}
 
       {/* Experience */}
       {/* <section id="Experience" className="snap-center px-[10vw]">
@@ -51,14 +83,14 @@ const Home = ({ skills, socials, projects, pageInfo }: Props) => {
       </section> */}
 
       {/* Skills */}
-      <section id="Skills" className="snap-start px-[10vw]">
+      {/* <section id="Skills" className="snap-start px-[10vw]">
         <Skills skills={skills} />
-      </section>
+      </section> */}
 
       {/* Projects */}
-      <section id="Projects" className="snap-start">
+      {/* <section id="Projects" className="snap-start">
         <Projects projects={projects} />
-      </section>
+      </section> */}
 
       {/* Contact Me */}
       <section id="Contact" className="snap-start">

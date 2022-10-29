@@ -2,14 +2,135 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* html {
+  } */
+
+  /* h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+
+  } */
+  h3 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  p {
+    @apply text-lg;
+  }
+}
+
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#709DFF]/40 hover:text-[#709DFF]/40;
+    @apply py-2 border border-transparent uppercase text-base tracking-widest text-[#33FF00] transition-all;
   }
+
   .contactInput {
     @apply outline-none bg-slate-400/10 rounded-lg border-b border-[#242424] p-3 text-white placeholder-gray-500 transition-all focus:border-[#709DFF]/40 focus:text-[#709DFF]/80 hover:border-[#709DFF]/40 caret-[#709DFF]/80;
   }
+
   .custom-button {
     @apply shadow-xl rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff];
+  }
+
+  .square {
+    @apply relative md:basis-[calc(42%)] lg:basis-[calc(33.333%)] border-gray-500 border-2 mx-[20px] mb-[10px] md:m-0 box-border before:block before:pt-[100%];
+  }
+
+  .square .content {
+    @apply absolute top-0 left-0 px-8 h-full w-full flex flex-col justify-center items-center overflow-hidden;
+  }
+
+  .square .content::after {
+    opacity: 0.3;
+    content: "";
+    width: 0;
+    height: 40%;
+    position: absolute;
+    background-color: white;
+    border: 0.1px solid white;
+    bottom: 16%;
+    left: 45px;
+  }
+
+  .square .content::after {
+    @apply md:bottom-[19%] md:h-[37%] lg:bottom-[16%] lg:h-[40%];
+  }
+
+  .paragraph-tag {
+    @apply before:text-gray-500 before:block before:content-['<p>'] after:text-gray-500 after:block after:content-['</p>'];
+  }
+
+  .chonky-underline-pink {
+    @apply after:absolute after:border-pink-500 after:border-4 after:w-[37%] after:left-[29%] after:top-[17%] after:z-[-1] md:after:top-[20%] lg:after:top-[17%] md:after:w-[35%] lg:after:w-[37%];
+  }
+
+  .chonky-underline-purple {
+    @apply after:absolute after:border-violet-500 after:border-4 after:w-[55%] after:left-[28%] after:top-[17%] after:z-[-1] md:after:top-[20%] lg:after:top-[17%] md:after:w-[51%] lg:after:w-[57%];
+  }
+
+  .chonky-underline-blue {
+    @apply after:absolute after:border-[#709dff] after:border-4 after:w-[25%] after:left-[31%] after:top-[17%] after:z-[-1] md:after:top-[20%] lg:after:top-[17%] md:after:w-[25%] lg:after:w-[25%];
+  }
+
+  .cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .cursor-inner {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eee;
+
+    left: 0;
+  }
+
+  :root {
+    --g1: rgb(98, 0, 234);
+    --g2: rgb(236, 64, 122);
+  }
+
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+
+    to {
+      background-position: -200% center;
+    }
+  }
+
+  .bg-hero {
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
+    background-size: 200%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+  }
+
+  .tile {
+    position: relative;
+  }
+
+  .tile:before {
+    background-color: rgb(15, 15, 15);
+    content: "";
+    position: absolute;
+    inset: 1px;
   }
 }

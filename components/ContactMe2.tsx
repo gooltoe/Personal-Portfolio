@@ -22,42 +22,35 @@ function ContactMe({ socials }: Props) {
   return (
     <div className="flex flex-col justify-evenly items-center md:pt-16">
       <div className="mb-20">
-        <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl pl-[20px]">
-          Contact
-        </h3>
-        <h3 className="tracking-[3px] text-gray-500 text-sm uppercase text-center pl-[3px]">
-          Get In Touch
-        </h3>
+        <h2 className="uppercase tracking-[20px] pl-[20px]">Contact</h2>
       </div>
 
       {/* <h4 className="text-2xl font-semibold text-center">
         <span className="underline decoration-[#709DFF]/50">Get in touch.</span>
       </h4> */}
-      <div className="grid lg:grid-cols-5 gap-8 px-[10vw]">
-        <div className="col-span-3 lg:col-span-2 w-full h-full">
-          <div className="p-4 shadow-xl rounded-xl lg:hover:scale-105 duration-300 ease-in">
-            <div className="max-w-[700px]">
+      <div className="grid lg:grid-cols-6 gap-4 px-[10vw]">
+        <div className="col-span-2 w-full h-full">
+          <div className="p-4 shadow-xl rounded-xl ">
+            {/* <div className="max-w-[700px]">
               <img
                 src="https://francescocolumbu.com/wp-content/uploads/2021/03/Best-Laptop-for-Front-End-Developer.jpg"
                 alt=""
                 className="rounded-xl"
               />
+            </div> */}
+
+            <div>
+              <h2 className="text-3xl font-bold pt-2">
+                Available for freelance opportunities
+              </h2>
+              <p className="py-6">
+                Do you have interesting projects you need help with? Send me an
+                email or connect with me via social media!
+              </p>
+              <h2 className="pb-6">hello@joerho.dev</h2>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold pt-2">Joe Rho</h2>
-              <p className="uppercase text-gray-500 tracking-widest">
-                Web Developer
-              </p>
-              <p className="py-4">
-                I am available for freelance projects. Contact me and let's
-                talk.
-              </p>
-            </div>
-            <div>
-              <p className="uppercase text-gray-500 tracking-widest">
-                Let's Connect
-              </p>
               {socials.map((social) => {
                 return (
                   <SocialIcon
