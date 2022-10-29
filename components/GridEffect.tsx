@@ -14,10 +14,13 @@ function GridEffect({}: Props) {
   const size = 90;
 
   const isBorder = (index: number) => {
-    const col = Math.floor(width / size);
-    const row = Math.floor(height / size);
+    const col = Math.floor((width as number) / size);
+    const row = Math.floor((height as number) / size);
 
-    if (width > 767 && (index % col === 0 || index % col === col - 1)) {
+    if (
+      (width as number) > 767 &&
+      (index % col === 0 || index % col === col - 1)
+    ) {
       return true;
     }
     return false;
@@ -60,8 +63,12 @@ function GridEffect({}: Props) {
 
       // tiles.current.style.gridTemplateColumns = `1fr 1fr`;
       // tiles.current.style.gridTemplateRows = `1fr 1fr`;
-      tiles.current.style.gridTemplateColumns = `repeat(${col}, minmax(0,1fr))`;
-      tiles.current.style.gridTemplateRows = `repeat(${row}, minmax(0,1fr))`;
+      (
+        tiles.current as any
+      ).style.gridTemplateColumns = `repeat(${col}, minmax(0,1fr))`;
+      (
+        tiles.current as any
+      ).style.gridTemplateRows = `repeat(${row}, minmax(0,1fr))`;
     }
   }, [width, height]);
 

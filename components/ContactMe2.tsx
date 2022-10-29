@@ -28,8 +28,8 @@ function ContactMe({ socials }: Props) {
       {/* <h4 className="text-2xl font-semibold text-center">
         <span className="underline decoration-[#709DFF]/50">Get in touch.</span>
       </h4> */}
-      <div className="grid lg:grid-cols-6 gap-4 px-[10vw]">
-        <div className="col-span-2 w-full h-full">
+      <div className="grid lg:grid-cols-6 px-[10vw]">
+        <div className="lg:col-span-2 w-full h-full">
           <div className="p-4 shadow-xl rounded-xl ">
             {/* <div className="max-w-[700px]">
               <img
@@ -64,15 +64,15 @@ function ContactMe({ socials }: Props) {
             </div>
           </div>
         </div>
-        <div className="col-span-3 w-full h-full shadow-xl p-4 rounded-xl">
+        <div className="lg:col-start-4 lg:col-span-4 w-full h-full shadow-xl p-4 rounded-xl">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col h-full justify-between"
           >
             <div>
-              <div className="grid md:grid-cols-2 gap-4 w-full">
+              <div className="grid md:grid-cols-2 gap-6 w-full">
                 <div className="flex flex-col">
-                  <label className="uppercase tracking-widest text-gray-500 text-sm pb-2">
+                  <label className="uppercase tracking-widest  text-sm pb-2">
                     Name
                   </label>
                   <input
@@ -83,7 +83,7 @@ function ContactMe({ socials }: Props) {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label className="uppercase tracking-widest text-gray-500 text-sm pb-2">
+                  <label className="uppercase tracking-widest text-sm pb-2">
                     Email
                   </label>
                   <input
@@ -95,7 +95,7 @@ function ContactMe({ socials }: Props) {
                 </div>
               </div>
               <div className="flex flex-col">
-                <label className="uppercase tracking-widest text-gray-500 text-sm py-2">
+                <label className="uppercase tracking-widest  text-sm py-2">
                   Subject
                 </label>
                 <input
@@ -106,7 +106,7 @@ function ContactMe({ socials }: Props) {
                 />
               </div>
               <div className="flex flex-col">
-                <label className="uppercase tracking-widest text-gray-500 text-sm py-2">
+                <label className="uppercase tracking-widest text-sm py-2">
                   Message
                 </label>
                 <textarea
@@ -118,7 +118,7 @@ function ContactMe({ socials }: Props) {
               </div>
             </div>
 
-            <button className="custom-button p-4 w-full rounded-md text-gray-800 font-bold text-lg mt-4">
+            <button className="custom-button p-4 w-full rounded-md font-semibold text-black text-lg mt-4">
               Submit
             </button>
           </form>

@@ -20,8 +20,6 @@ import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import Expertise from "../components/Expertise";
-import Expertise2 from "../components/Expertise2";
-import GridEffect from "../components/GridEffect";
 
 type Props = {
   skills: Skill[];
