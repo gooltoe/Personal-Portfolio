@@ -3,17 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* html {
-  } */
-
-  /* h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-
-  } */
   h3 {
     @apply text-3xl font-bold;
   }
@@ -29,15 +18,15 @@
 
 @layer components {
   .heroButton {
-    @apply py-2 border border-transparent uppercase text-base tracking-widest text-[#33FF00] transition-all;
+    @apply py-2 border border-transparent uppercase text-base tracking-widest text-[#709dff] transition-all;
   }
 
   .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-lg border-b border-[#242424] p-3 text-white placeholder-gray-500 transition-all focus:border-[#33FF00] focus:text-[#33FF00] hover:border-[#33FF00] caret-[#33FF00];
+    @apply outline-none bg-slate-400/10 rounded-lg border-b border-[#242424] p-3 text-white placeholder-gray-500 transition-all  caret-white;
   }
 
   .custom-button {
-    @apply shadow-xl rounded-xl  bg-gradient-to-r from-[var(--g1)] to-[var(--g2)];
+    @apply shadow-xl rounded-xl bg-[#709dff] uppercase;
   }
 
   .square {
@@ -69,7 +58,7 @@
   }
 
   .chonky-underline-pink {
-    @apply after:absolute after:border-pink-500 after:border-4 after:w-[37%] after:left-[29%] after:top-[17%] after:z-[-1] md:after:top-[20%] lg:after:top-[17%] md:after:w-[35%] lg:after:w-[37%];
+    @apply after:absolute after:border-pink-500 after:border-4 after:w-[37%] after:left-[29%] after:top-[17%] after:z-[-1] md:after:top-[23%] lg:after:top-[17%] md:after:w-[35%] lg:after:w-[37%];
   }
 
   .chonky-underline-purple {
@@ -102,6 +91,7 @@
   :root {
     --g1: rgb(98, 0, 234);
     --g2: rgb(236, 64, 122);
+    --main_color: #709dff;
   }
 
   @keyframes background-pan {

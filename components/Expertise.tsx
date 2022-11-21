@@ -25,15 +25,14 @@ function Expertise({}: Props) {
                 />
               </svg>
               <h3 className="z-[0]">
-                <span className="chonky-underline-pink">Software</span>{" "}
+                <span className="chonky-underline-pink">Software</span>
                 Development
               </h3>
             </div>
             <div className="paragraph-tag">
               <p className="pl-[35px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt enim ratione suscipit consequuntur dolores amet
-                cupiditate, accusamus,
+                Experienced in software architecture and building scalable
+                projects. Fluent in multiple programming languages.
               </p>
             </div>
           </div>
@@ -62,9 +61,9 @@ function Expertise({}: Props) {
             </div>
             <div className="paragraph-tag">
               <p className="pl-[35px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt enim ratione suscipit consequuntur dolores amet
-                cupiditate, accusamus,
+                Passionate about UI/UX and building cool websites with great
+                designs. Experienced in HTML, CSS, JS as well as React and Next
+                frameworks.
               </p>
             </div>
           </div>
@@ -92,9 +91,9 @@ function Expertise({}: Props) {
             </div>
             <div className="paragraph-tag">
               <p className="pl-[35px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt enim ratione suscipit consequuntur dolores amet
-                cupiditate, accusamus,
+                Web3 technology powered by the Ethereum network. Passionate
+                about bridging the gap between web2 and web3 and spreading
+                awareness.
               </p>
             </div>
           </div>
@@ -102,8 +101,7 @@ function Expertise({}: Props) {
         <div className="square hidden md:block lg:hidden border-0 border-t-2 border-l-2">
           <div className="absolute top-0 left-0 px-8 h-full w-full flex flex-col justify-center items-center overflow-hidden">
             <h3 className="pl-[25px] after:absolute after:border-yellow-500 after:border-4 after:h-[50%] after:left-[7%] after:top-[26%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              ab, molestiae
+              This is here to maintain responsiveness!
             </h3>
           </div>
         </div>

@@ -18,10 +18,6 @@ function Hero({ pageInfo, socials }: Props) {
   });
   return (
     <div className="h-screen flex flex-col items-center justify-center text-center overflow-hidden relative">
-      <div className="absolute">
-        <GridEffect />
-      </div>
-
       <div className="absolute top-0 w-full h-[60%] bg-gradient-to-b from-[rgb(15,15,15)] to-transparent" />
       <div className="absolute bottom-0 w-full h-[60%] bg-gradient-to-t from-[rgb(15,15,15)] to-transparent" />
       <div className="absolute left-0 w-[30%] h-full bg-gradient-to-r from-[rgb(15,15,15)] to-transparent" />
@@ -32,9 +28,9 @@ function Hero({ pageInfo, socials }: Props) {
           {pageInfo.name}
         </h1>
         <h2 className="uppercase tracking-wide">{pageInfo.role}</h2>
-        <h1 className="text-2xl lg:6xl text-[#33FF00] font-semibold px-10 pt-10">
+        <h1 className="text-2xl lg:6xl text-[#709dff] font-semibold px-10 pt-10">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#33FF00" />
+          <Cursor cursorColor="#709dff" />
         </h1>
         <div className="pt-5">
           {socials.map((social) => {

@@ -27,7 +27,7 @@ function NavBar({ socials }: Props) {
         </div>
 
         <div onClick={handleNav} className="md:hidden pr-8">
-          <AiOutlineMenu size={22} className="text-[#33FF00] cursor-pointer" />
+          <AiOutlineMenu size={22} className="text-[#709dff] cursor-pointer" />
         </div>
       </div>
       <div
@@ -47,7 +47,7 @@ function NavBar({ socials }: Props) {
           <div onClick={handleNav} className="flex justify-end items-center">
             <AiOutlineClose
               size={22}
-              className="text-[#33FF00]  cursor-pointer"
+              className="text-[#709dff]  cursor-pointer"
             />
           </div>
           {/* <div className="border-b my-4 border-gray-500 t">
