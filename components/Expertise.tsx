@@ -25,7 +25,7 @@ function Expertise({}: Props) {
                 />
               </svg>
               <h3 className="z-[0]">
-                <span className="chonky-underline-pink">Software</span>
+                <span className="chonky-underline-pink">Software</span>{" "}
                 Development
               </h3>
             </div>

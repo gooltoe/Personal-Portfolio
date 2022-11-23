@@ -28,7 +28,7 @@ function Cursor({ x, y }: Props) {
   }, [x, y]);
 
   return (
-    <div className="cursor">
+    <div className="cursor hidden md:block">
       <div ref={cursorRef} className="cursor-inner"></div>
       <div ref={cursorOuterRef} className="cursor-outer"></div>
     </div>
