@@ -18,12 +18,12 @@ function Hero({ pageInfo, socials }: Props) {
   });
   return (
     <div className="h-screen flex flex-col items-center justify-center text-center overflow-hidden relative">
-      <div className="absolute top-0 w-full h-[60%] bg-gradient-to-b from-[rgb(15,15,15)] to-transparent" />
+      {/* <div className="absolute top-0 w-full h-[60%] bg-gradient-to-b from-[rgb(15,15,15)] to-transparent" />
       <div className="absolute bottom-0 w-full h-[60%] bg-gradient-to-t from-[rgb(15,15,15)] to-transparent" />
       <div className="absolute left-0 w-[30%] h-full bg-gradient-to-r from-[rgb(15,15,15)] to-transparent" />
-      <div className="absolute right-0 w-[30%] h-full bg-gradient-to-l from-[rgb(15,15,15)] to-transparent" />
+      <div className="absolute right-0 w-[30%] h-full bg-gradient-to-l from-[rgb(15,15,15)] to-transparent" /> */}
 
-      <div className="z-20 w-full h-full flex flex-col justify-center relative">
+      <div className="w-full h-full flex flex-col justify-center relative">
         <h1 className="text-7xl md:text-9xl tracking-wide font-bold uppercase drop-shadow-xl">
           {pageInfo.name}
         </h1>

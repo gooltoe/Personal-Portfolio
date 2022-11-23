@@ -17,6 +17,10 @@
 }
 
 @layer components {
+  .outermost {
+    @apply bg-[rgb(15,15,15)] text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scroll-smooth caret-transparent;
+  }
+
   .heroButton {
     @apply py-2 border border-transparent uppercase text-base tracking-widest text-[#709dff] transition-all;
   }
@@ -70,22 +74,34 @@
   }
 
   .cursor {
+    left: 0;
+    top: 0;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+
+  .cursor-outer {
     position: fixed;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid #eee;
-    left: 0;
-    transform: translate(-50%, -50%);
+    border: 2px solid #709dff;
+    z-index: 10000;
   }
+
   .cursor-inner {
-    position: absolute;
+    position: fixed;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #eee;
+    background: #709dff;
+    z-index: 10000;
+  }
 
-    left: 0;
+  .outermost:hover > .cursor {
+    opacity: 1;
   }
 
   :root {

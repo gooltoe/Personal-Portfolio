@@ -47,12 +47,10 @@ const Home = ({ skills, socials, projects, pageInfo }: Props) => {
   const { x, y, handleMouseMove } = useMove();
 
   return (
-    <div
-      onMouseMove={handleMouseMove}
-      className="bg-[rgb(15,15,15)] text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scroll-smooth caret-transparent"
-    >
+    <div onMouseMove={handleMouseMove} className="outermost">
       {/* Cursor */}
-      {/* <Cursor x={x} y={y} /> */}
+      <Cursor x={x} y={y} />
+
       <Head>
         <title>Joe Rho - Web Developer</title>
       </Head>
